@@ -1,5 +1,4 @@
 import * as path from 'path';
-const __dirname = path.resolve();
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
@@ -12,6 +11,7 @@ import uploadRoutes from './routes/uploadRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 const port = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
 connectDB();
 
